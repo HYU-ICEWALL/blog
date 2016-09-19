@@ -19,7 +19,7 @@ share: true
 
 그렇다면, 왜 Github와 Jekyll 기반으로 블로그를 운영하려는지에 대해서 짧은 이야기를 해야겠군요.
 
-일단, Github는 Organization과 개인의 홈페이지를 하나씩 운영 할 수 있도록 해줍니다. 유저명.github.io 나 기관명.github.io 형태의 레포지토리를 만들게 되면, Github Pages가 알아서 접근 가능한 홈페이지를 빌드하여줍니다. 예를 들어서, [benjioh5 계정](https://github.com/benjioh5)에서, [benjioh5.github.io 라는 레포지토리](https://github.com/benjioh5/benjioh5.github.io)를 만들고, index.html 등 홈페이지를 구성하는 요소들을 푸시하면, 알아서 [benjioh5.github.io](benjioh5.github.io)라는 페이지를 만드는 형식입니다. 기본적으로 GitHub는 Jekyll을 지원하고 있음으로, Jekyll을 이용한 블로그 운영도 가능합니다. 일반적으로 마음에 드는 [지킬 테마](http://jekyllthemes.org/)를 골라 fork나 git clone을 한 뒤 _config.yml 파일을 적절히 수정만 하면, 바로 블로그 운영이 가능합니다. 이에 대한 자세한 설명은 [Nolboo](nolboo.kim/)님의 [지킬로 깃허브에 무료 블로그 만들기](https://nolboo.kim/blog/2013/10/15/free-blog-with-github-jekyll/)에 자세히 나와있음으로 참고하시길 바랍니다.
+일단, Github는 Organization과 개인의 홈페이지를 하나씩 운영 할 수 있도록 해줍니다. 유저명.github.io 나 기관명.github.io 형태의 레포지토리를 만들게 되면, Github Pages가 알아서 접근 가능한 홈페이지를 빌드하여줍니다. 예를 들어서, [benjioh5 계정](https://github.com/benjioh5)에서, [benjioh5.github.io 라는 레포지토리](https://github.com/benjioh5/benjioh5.github.io)를 만들고, index.html 등 홈페이지를 구성하는 요소들을 푸시하면, 알아서 [benjioh5.github.io](https://benjioh5.github.io)라는 페이지를 만드는 형식입니다. 기본적으로 GitHub는 Jekyll을 지원하고 있음으로, Jekyll을 이용한 블로그 운영도 가능합니다. 일반적으로 마음에 드는 [지킬 테마](http://jekyllthemes.org/)를 골라 fork나 git clone을 한 뒤 _config.yml 파일을 적절히 수정만 하면, 바로 블로그 운영이 가능합니다. 이에 대한 자세한 설명은 [Nolboo](https://nolboo.kim/)님의 [지킬로 깃허브에 무료 블로그 만들기](https://nolboo.kim/blog/2013/10/15/free-blog-with-github-jekyll/)에 자세히 나와있음으로 참고하시길 바랍니다.
 
 이제 마크다운을 이용하여 블로그 글을 정적으로 생성하기만 하면 됩니다. `_post` 폴더 아래 `yyyy-mm-dd-적당한-이름.md` 형태로 파일을 만듭니다. 에디터로 파일을 열고, 글 제목, 날짜, 태그 등을 기술하는 YAML 기반 인덱스를 작성 한 뒤, 본문을 작성하면, 블로그 글 작성은 끝납니다. 이제, GitHub 레포지토리에 푸쉬를 합시다. 
 
