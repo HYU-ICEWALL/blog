@@ -8,7 +8,7 @@ name:               "Kiko Plus"
 
 
 author:
-  name:             your-name
+  name:             ICEWALL
   facebook:         your-id
   twitter:          your-id
   github:           your-id
@@ -26,9 +26,9 @@ disqus:
   id:               "your-id"
 
 # URL
-url:                "https://AWEEKJ.github.io"
+url:                "https://HYU-ICEWALL.github.io"
 #url:               "localhost:4000"
-baseurl:            ""
+baseurl:            "/blog"
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
