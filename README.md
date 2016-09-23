@@ -1,103 +1,38 @@
-# Kiko Plus Theme
+# 아이스월 기술 블로그
 
-![image](/images/image.png)
+이런저런 것들을 테스트하고 아이스월에서 일어나는 기술적인 일들에 대해 기록하려고 만든 블로그입니다. 사용 방법은 간단합니다. git 사용법을 조금이라도 알고 있으면 바로 블로그를 사용할 수 있습니다.
 
-You can see live demo [here](https://aweekj.github.io/Kiko-plus)
-
-This theme is inspired by [Kiko](http://github.com/gfjaru/Kiko) theme, powered by [Jekyll](http://jekyllrb.com), hosted on [Github Pages](https://pages.github.com).
-
-## Features
-
-- Disqus comment system
-- Google analytics
-- Pagination support
-- Custom tags
-- SEO support
-
-
-## Installation
-
-#### Method 1: new master's repository (The Best)
-
-1. First [fork](https://github.com/AWEEKJ/Kiko-plus/fork) it.
-2. Change your forked repository name _Kiko-plus_ to __USERNAME.github.io__ where
-   __USERNAME__ is your github user name.
-3. Access your new blog via [https://username.github.io](https://username.github.io).
-4. [See configuration](#configuration).
-
-#### Method 2: gh-pages in existing repository
-
-1. Create a new branch called _gh-pages_ in the repository where you want to add a template [managing branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
-2. From command line run `git clone https://github.com/AWEEKJ/Kiko-plus.git` - this will clone _Kiko-plus_ template to your computer.
-3. Create new branch `git checkout -b gh-pages` where _gh-pages_ will be your branch name.
-4. Add remote, which is your repo from the first step, to your new branch `git remote add gh-pages https://github.com/<yourName>/<yourMaster>/gh-pages`. _yourName_ is your account name and _yourMaster_ is your repository.
-5. Push new branch to remote `git push gh-pages`.
-6. Update `_config.yml` file by changing `baseurl: "<branchName>"` _branchName_ is your branch name where _gh-pages_ resides. See [configuration](#configuration).
-
-#### Method 3: run it locally
-
-1. Download [zip](https://github.com/AWEEKJ/Kiko-plus/archive/master.zip) or clone it `git clone https://github.com/AWEEKJ/Kiko-plus`.
-2. Go inside folder and run `jekyll serve` or `bundle exec jekyll s` or `rake preview`. This will build a website which you can access [https://localhost:4000](https://localhost:4000). You need to have [Jekyll](https://jekyllrb.com/docs/installation/) installed to do this.
-
-
-## Configuration
-
-All configuration is done via `_config.yml` file which you will find in your main repo folder. Change this `<something>` to yours.
-
-- Change this to your blog name.
-
-```yml
-name: <blog-name>
+```shell
+$ git clone https://github.com/HYU-ICEWALL/blog
+$ git pull
+(이런 저런 작업 작업)
+$ git add 수정한-파일
+$ git commit -m "뭐 수정함"
+$ git push
 ```
 
-- Change this to your domain. **NOTE**- if running locally change this to `url: "https://localhost:4000"`.
+git을 도저히 못 쓰겠다면, GitHub에서 제공하는 웹 에디터를 사용하는 것도 한 방법입니다.
 
-```yml
-url: "https://<your-name>.github.io"
-```
+포스팅 을 하는 방법은 다음과 같습니다.
 
-- Change this to your branch name where _gh-pages_ resides. !NOTE apply only if you used __Method 2__ for installation.
+1. `_post` 폴더 아래 yyyy-mm-dd-적절한-이름.md 형태의 파일을 생성한다.
 
-```yml
-baseurl: "/<branch-name>"
-```
+2. 생성한 파일을 열어 편집을 시작한다. 이 때, yaml로 된 헤더를 추가해야한다.
+   yaml로 된 헤더는 다음과 같습니다. 잘 모르겠다면 `_post` 폴더의 `2016-09-19-hello-world.md` 를 참고하시길 바랍니다.
 
-- These configuration in `author:` is for links to icons in footer. Modify `_includes/footer.html` to add more link icons.
+   ```yaml
+   ---
+   layout: post
+   title: "블로그 제목"
+   descripttion: "포스팅 설명, 대충 적어도 됨"
+   data: "yyyy-mm-dd 형태의 날짜 (e.g. 2016-09-30)"
+   tags: [적당한, 태그들]
+   share: true
+   ---
+   ```
 
-```yml
-author:
-  name:             your-name
-  facebook:         your-id
-  twitter:          your-id
-  github:           your-id
-  linkedin:         your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
-```
+3. 편집이 끝나면 저장을 하고, 깃을 이용하여 푸쉬를 합니다.
 
-- Change this to your Google Analytic ID.
+여러 사람들이 동시에 포스팅하게 되면서 충돌이 나는 등, 여러가지 복잡한 문제들이 존재하는거 같지만 그건 그 때 가서 생각해봅시다. 추가적으로 이 블로그는 Github-pages를 이용하여 만들어졌으며, Jekyll을 이용하여 페이지를 생성합니다.
 
-```yml
-google-analytics:
-  id:               your-id
-```
-
-- Change this to your Disqus ID.
-
-```yml
-disqus:
-  id:               your-id
-```
-
-## Rakefile Usage
-
-```bash
-$ rake post title="A Title" [date="2015-08-16"] [tags=[tag1,tag2]]
-$ rake draft title="A Title" [date="2015-08-16"] [tags=[tag1,tag2]]
-$ rake preview
-```
-
-## License
-
-This theme is released under MIT License.
+자세한 작동 원리를 알고 싶다면, 한국어로 번역된 [Jekyll 문서](https://jekyllrb-ko.github.io/)를 보거나 [Nolboo](https://nolboo.kim/)님의 [지킬로 깃허브에 무료 블로그 만들기](https://nolboo.kim/blog/2013/10/15/free-blog-with-github-jekyll/)를 참고하시길 바랍니다. 또한, 블로그의 유지보수를 하기 위해서는 Liquid라는 템플릿팅 엔진에 대해서도 숙지해야합니다. 이를 위해 [공식 문서](https://shopify.github.io/liquid/)를 볼 것을 추천합니다. 감사합니다.
