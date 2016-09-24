@@ -15,7 +15,15 @@ $ git push
 
 git을 도저히 못 쓰겠다면, GitHub에서 제공하는 웹 에디터를 사용하는 것도 한 방법입니다.
 
-포스팅 을 하는 방법은 다음과 같습니다.
+git clone 후, rake를 이용하여 포스트를 쉽게 작성할 수 있습니다.
+
+```bash
+$ rake post title="A Title" [date="2015-08-16"][tags=[tag1,tag2]]
+$ rake draft title="A Title" [date="2015-08-16"][tags=[tag1,tag2]]
+$ rake preview
+```
+
+수동으로 포스팅 을 하는 방법은 다음과 같습니다.
 
 1. `_post` 폴더 아래 yyyy-mm-dd-적절한-이름.md 형태의 파일을 생성한다.
 
