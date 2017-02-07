@@ -51,7 +51,7 @@ print 'len:',len(r)
 
 스크립트에서 s는 참조된 바이트어레이(조롱하는 문자열 ㅂㄷㅂㄷ)이고 q는 분석으로 얻어낸 각 문자의 인덱스이다. 이것을 조합하면 FLAG를 얻을 수 있다.
 
-![re2_1](/images/alex_re2_1.png)
+![re2_1](/blog/assets/images/alex_re2_1.png)
 
 위에서 v7은 for문 안에서 우리가 입력한 플래그의 각 문자열이 된다. v13은 0에서 부터 1씩 점점 증가하게 된다.
 
@@ -71,7 +71,7 @@ wget https://ctf.oddcoder.com/files/6802e8faa75f51dbdd32b1d8163ac862/catalyst
 
 분석해보면, 아이디는 12바이트이다. 이 12바이트는 3개의 정수(4바이트 * 3)로 부터 얻어낼 수 있다. 3개의 정수는 3항 연립방정식을 풀면 얻을 수 있다.
 
-![re3_1](/images/alex_re3_1.png)
+![re3_1](/blog/assets/images/alex_re3_1.png)
 
 $x+y+z=1550207830$
 
@@ -96,7 +96,7 @@ catalyst_ceo
 
 이제 비밀번호를 알아내자
 
-![re3_2](/images/alex_re3_2.png)
+![re3_2](/blog/assets/images/alex_re3_2.png)
 
 a1은 아까 알아냈던 아이디이다. 즉, 아까 알아낸 3개의 정수를 더한 값을 rand의 시드로 주고 연속적으로 랜덤값을 추출한 후에 어떤 값들을 더하고 나서, 아이디때의 경우와 같이 숫자들을 스트링으로 바꾸어 주면 비밀번호가 나올 것이다. 우선, C의 rand()함수를 써야 하므로 간단한 C코딩을 하자
 
